@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
   try {
-    res.json(await testing.getMultiple(req.query.page));
+    res.json(await testing.getMultiple());
   } catch (err) {
     console.error(`Error while getting testing info: ${err.message}`);
     next(err);
